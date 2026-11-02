@@ -1,0 +1,17 @@
+{
+  "description": "규칙 문서를 적용 시점에 주입한다. Claude Code(.claude/settings.json)와 같은 스크립트를 호출한다.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch|Edit|Write)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.agents/hooks/inject_rules.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
