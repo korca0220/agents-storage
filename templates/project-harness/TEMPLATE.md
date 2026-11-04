@@ -4,7 +4,6 @@
 
 - 원본: 운영 중인 사내 Flutter 앱 모노레포의 루트 하네스 (AGENTS.md, ADR, exec-plan, 시점 주입 훅)
 - 이 템플릿은 그 구조를 뼈대로 하고, 제품 전용 결정(ADR 본문, Invariant 항목, 스킬, 이슈 키)을 걷어낸 것이다.
-- Flutter + Melos 전용 설정은 `examples/`의 선택 항목으로 분리했다.
 
 ## 채울 자리 (placeholder)
 
@@ -86,15 +85,7 @@ project-harness/
 - **루트 `AGENTS.md`는 짧게**: 모든 세션이 매번 읽으므로 길어질수록 비용이 듭니다. 특정 디렉터리에만 해당하는 규칙은 그 디렉터리의 중첩 `AGENTS.md`(+ 짝이 되는 `CLAUDE.md`)로 내립니다.
 - **훅이 안 도는 환경**: 훅이 없어도 `AGENTS.md`에 "규칙이 컨텍스트에 없으면 직접 읽는다"고 적어 두었으므로 동작은 합니다. 다만 주입 시점이 보장되지 않습니다.
 
-## 선택 항목 (스택 의존)
-
-원본은 Flutter + Melos 모노레포라서 아래 항목은 스택에 맞을 때만 가져갑니다. 예시는 `examples/`에 있습니다.
-
-- 품질 게이트 명령 (`fvm dart run melos ...`) → `examples/quality-gate-flutter-melos.md`
-- 규칙 문서 크기 예산을 테스트로 강제하기 → 같은 파일 하단
-
 ## 예시
 
 - [`examples/adr-001-state-management.md`](./examples/adr-001-state-management.md): ADR 한 편을 채운 모습
 - [`examples/exec-plan-cursor-pagination.md`](./examples/exec-plan-cursor-pagination.md): exec-plan 한 편을 채운 모습
-- [`examples/invariants.md`](./examples/invariants.md): Invariant 표에 들어갈 만한 규칙 예시

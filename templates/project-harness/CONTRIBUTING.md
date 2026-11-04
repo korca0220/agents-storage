@@ -71,5 +71,3 @@ PR 본문은 작업 일지가 아니라 **리뷰어가 변경을 이해하고 �
 {{format 검사}}
 {{test}}
 ```
-
-Flutter + Melos 예시는 [`examples/quality-gate-flutter-melos.md`](./examples/quality-gate-flutter-melos.md)에 있습니다. (적용 후 이 링크는 지웁니다.)
